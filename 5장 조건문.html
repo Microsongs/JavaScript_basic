@@ -14,29 +14,49 @@
         <!--onclick에 js코드를 넣어서 사용함 -->
         <!--css selector를 사용-->
         
-        <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        ">
-        <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        "> 
-        <!-- night버튼과 day버튼을 조건문으로 합침-->
-        <input id="night_day2" type="button" value="black" onclick="
-        // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
-        if(document.querySelector('night_day2').value === 'night')
-        {
+            <input type="button" value="night" onclick="
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
-            document.querySelector('night_day2').value = 'day';
-        }
-        else
-        {
+            ">
+            <input type="button" value="day" onclick="
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color = 'black';
-            document.querySelector('night_day2').value = 'night';
-        }
+            "> 
+        <!-- night버튼과 day버튼을 조건문으로 합침-->
+        변경 전
+        <input id="night_day2" type="button" value="night" onclick="
+        // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
+            if(document.querySelector('#night_day2').value === 'night')
+            {
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                document.querySelector('#night_day2').value = 'day';
+            }
+            else
+            {
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                document.querySelector('#night_day2').value = 'night';
+            }
+        ">
+        변경 후
+        <!-- -> 위 코드를 효율적으로 변경 -->
+        <input type="button" value="night" onclick="
+            // 중복 제거
+            let target = document.querySelector('body')
+            // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
+            if(this.value === 'night')
+            {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                this.value = 'day';
+            }
+            else
+            {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                this.value = 'night';
+            }
         // -> 위 코드를 효율적으로 변경
         ">
 
@@ -49,24 +69,6 @@
         <p>
           JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
         </p>
-        <!-- night버튼과 day버튼을 조건문으로 합침-->
-        <input type="button" value="black" onclick="
-        // 중복 제거
-        let target = document.querySelector('body')
-        // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
-        if(this.value === 'night')
-        {
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = 'day';
-        }
-        else
-        {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value = 'night';
-        }
-        // -> 위 코드를 효율적으로 변경
-        ">
+
     </body>
 </html>
