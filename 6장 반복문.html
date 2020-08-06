@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <title>WEB1 - JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+            .js{
+                font-weight : bold;
+                color:red;
+            }
+        </style>
+    </head>
+    <body style="background-color: white;">
+        <h1><a href="index.html">WEB</a></h1>
+        <!--onclick에 js코드를 넣어서 사용함 -->
+        <!--css selector를 사용-->
+        <input type="button" value="night" onclick="
+        // 중복 제거
+        let target = document.querySelector('body')
+        // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
+        if(this.value === 'night')
+        {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+        }
+        else
+        {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+        }
+        // -> 위 코드를 효율적으로 변경
+        ">
+
+        <ol>
+          <li><a href="1.html">HTML</a></li>
+          <li><a href="2.html">CSS</a></li>
+          <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <h2>JavaScript</h2>
+        <p>
+          JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+        </p>
+        <!-- night버튼과 day버튼을 조건문으로 합침-->
+        <input type="button" value="night" onclick="
+        // 중복 제거
+        let target = document.querySelector('body')
+        // dataset.mode가 day일 경우 if의 코드가, 아닐 경우 else의 코드가 실행
+        if(this.value === 'night')
+        {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+        }
+        else
+        {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+        }
+        // -> 위 코드를 효율적으로 변경
+        ">
+    </body>
+</html>
