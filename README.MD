@@ -4,6 +4,7 @@
 Carousel의 구현까지 목표로 합니다.<br><br>
 https://www.inflearn.com/course/web2-javascript/lecture/9868?tab=curriculum 을 보고 공부합니다.<br>
 완료 예정 수강일 : 8월 14일 이내 -> 8월 12일 완강
+수강 노트 : https://1drv.ms/u/s!AkXE8_ZhEz2FgclXO-UYwLWEpHIcow
 
 #紹介
 
@@ -11,3 +12,4 @@ https://www.inflearn.com/course/web2-javascript/lecture/9868?tab=curriculum 을 
 Carouselを実現することを目指します。<br><br>
 https://www.inflearn.com/course/web2-javascript/lecture/9868?tab=curriculum を見て勉強します。<br>
 8月12日に講義を全部受けました。
+授業ノート：https://1drv.ms/u/s!AkXE8_ZhEz2FgclXO-UYwLWEpHIcow
